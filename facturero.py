@@ -18,10 +18,10 @@ def create_pdf(data, services):
     # Datos de la empresa a la izquierda
     c.drawString(140, height - 40, f"Empresa: {data['empresa']}")
     c.drawString(140, height - 60, f"Teléfono: {data['telefono_empresa']}")
-    c.drawInlineImage('instagram.png', 135, height - 86, width=20, height=20)
+    c.drawInlineImage('instagram.png', 140, height - 86, width=20, height=20)
     c.drawString(165, height - 80, f"@refrimat05")
 
-    # Datos del cliente a la derecha
+    # Datos del cliente a la derechaa
     c.drawString(width - 300, height - 40, f"Cliente: {data['cliente'].capitalize()}")
     c.drawString(width - 300, height - 60, f"Telefono: {data['telefono_cliente']}")
 
@@ -34,7 +34,7 @@ def create_pdf(data, services):
 
     # Tabla de servicios
     c.setFont("Helvetica-Bold", 11)
-    y_position = height - 160
+    y_position = height - 180
     c.drawString(30, y_position, "Descripción")
     c.drawString(330, y_position, "Cantidad")
     c.drawString(430, y_position, "Precio Unitario")
