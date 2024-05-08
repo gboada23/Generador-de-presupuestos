@@ -23,18 +23,18 @@ def create_pdf(data, services):
 
     # Datos del cliente a la derecha
     c.drawString(width - 300, height - 40, f"Cliente: {data['cliente'].capitalize()}")
-    c.drawString(width - 300, height - 70, f"Telefono: {data['telefono_cliente']}")
+    c.drawString(width - 300, height - 60, f"Telefono: {data['telefono_cliente']}")
 
 # Configurar la fuente para el título
     date_str = datetime.now().strftime('%d/%m/%Y')
     c.setFont("Helvetica-Bold", 18)  # Fuente en negrita con tamaño 18
 
 # Dibujar el título en el centro superior de la página
-    c.drawCentredString(width / 2, height - 110, f"Presupuesto de Servicios al dia {date_str}")
+    c.drawCentredString(width / 2, height - 130, f"Presupuesto de Servicios al dia {date_str}")
 
     # Tabla de servicios
     c.setFont("Helvetica-Bold", 11)
-    y_position = height - 140
+    y_position = height - 160
     c.drawString(30, y_position, "Descripción")
     c.drawString(330, y_position, "Cantidad")
     c.drawString(430, y_position, "Precio Unitario")
